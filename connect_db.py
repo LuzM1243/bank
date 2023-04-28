@@ -1,9 +1,3 @@
-#for later use
-# mycursor = connect_to_db.cursor()
-# sql = "UPDATE customers SET address = 'Canyon 123' WHERE address = 'Valley 345'"
-# mycursor.execute(sql)
-# connect_to_db.commit()
-# print(mycursor.rowcount, "record(s) affected")
 import mysql.connector
 
 #setting up the database in python
@@ -23,10 +17,6 @@ if __name__ == "__main__":
     connection = connect_to_db()
     cursor=connection.cursor()
     connection.cursor()
-    cursor.execute("SELECT * FROM CUSTOMER")
-    for x in cursor:
-        print(x)
-        print('Showing info in table') 
 
 balance = 0
 def option_1 ():
@@ -112,17 +102,9 @@ def main_menu():
         if options == "1":
             option_1()    
         if options == "2":
-            # if user_pin is None:
-            #      print("No account has been created yet. go to option 1 in the menu")
-            #      return main_menu()
-            # else:
-                option_2(user_pin)
+            option_2(user_pin)
         if options == "3":
-            # if user_pin is None:
-            #      print("No account has been created yet. go to option 1 in the menu")
-            #      return main_menu()
-            # else:
-                option_3(user_idcustomer)
+            option_3(user_idcustomer)
         if options == "4":
                     print ('exit')
                     exit()  
